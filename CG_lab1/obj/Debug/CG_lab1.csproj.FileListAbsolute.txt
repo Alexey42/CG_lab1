@@ -1,0 +1,9 @@
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\bin\Debug\CG_lab1.exe.config
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\bin\Debug\CG_lab1.exe
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\bin\Debug\CG_lab1.pdb
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.csprojAssemblyReference.cache
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.Form1.resources
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.Properties.Resources.resources
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.csproj.GenerateResource.cache
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.exe
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.pdb
