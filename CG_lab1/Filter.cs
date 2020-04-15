@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.ComponentModel;
+using System.Web.UI;
 
 namespace CG_lab1
 {
@@ -31,6 +32,22 @@ namespace CG_lab1
             if (value < min) return min;
             if (value > max) return max;
             return value;
+        }
+
+        public Tuple<float, float> calcMaxMinBrightness(Bitmap img)
+        {
+            float max = img.GetPixel(0, 0).GetBrightness();
+            float min = img.GetPixel(0, 0).GetBrightness();
+
+            for (int i = 0; i < img.Width; i++)
+                for (int j = 0; j < img.Height; j++)
+                {
+                    Color sourceColor = img.GetPixel(i, j);
+                    max = Math.Max(sourceColor.GetBrightness(), max);
+                    min = Math.Min(sourceColor.GetBrightness(), min);
+                }
+            Tuple<float, float> res = new Tuple<float, float>(max, min);
+            return res;
         }
 
         protected abstract Color calcPixelColor(Bitmap img, int x, int y);

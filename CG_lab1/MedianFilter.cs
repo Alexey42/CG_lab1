@@ -31,10 +31,7 @@ namespace CG_lab1
                 }
             Array.Sort(medR); Array.Sort(medG); Array.Sort(medB);
 
-            return Color.FromArgb(
-                Clamp(medR[size * size / 2], 0, 255),
-                Clamp(medG[size * size / 2], 0, 255),
-                Clamp(medB[size * size / 2], 0, 255));
+            return Color.FromArgb(Clamp(medR[size * size / 2], 0, 255), Clamp(medG[size * size / 2], 0, 255), Clamp(medB[size * size / 2], 0, 255));
         }
 
     }

@@ -14,6 +14,7 @@ namespace CG_lab1
     {
         Bitmap img = null;
         Stack<Bitmap> history = new Stack<Bitmap>();
+        int[,] kernel = null;
 
         public Form1()
         {
@@ -46,6 +47,8 @@ namespace CG_lab1
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             history.Push(img);
+            Action act = ()=> button2.Enabled = false;
+            Invoke(act);
             Bitmap res = ((Filter)e.Argument).processImg(img, backgroundWorker1);
             if (backgroundWorker1.CancellationPending != true) img = res;
         }
@@ -62,6 +65,7 @@ namespace CG_lab1
                 pictureBox1.Image = img;
                 pictureBox1.Refresh();
             }
+            button2.Enabled = true;
             progressBar1.Value = 0;
         }
 
@@ -204,6 +208,48 @@ namespace CG_lab1
             if (img == null) return;
             Filter filter = new PerfectReflectorFilter();
             backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void растяжениеГистограммыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (img == null) return;
+            Filter filter = new GistogramFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
+
+        private void erosionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var win = new Form2("Erosion");
+            win.Owner = this;
+            win.ShowDialog();          
+        }
+
+        private void dilatationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var win = new Form2("Dilatation");
+            win.Owner = this;
+            win.ShowDialog();
+        }
+
+        private void openingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var win = new Form2("Opening");
+            win.Owner = this;
+            win.ShowDialog();
+        }
+
+        private void closingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var win = new Form2("Closing");
+            win.Owner = this;
+            win.ShowDialog();
+        }
+
+        private void topHatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var win = new Form2("TopHat");
+            win.Owner = this;
+            win.ShowDialog();
         }
     }
 }

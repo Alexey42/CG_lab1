@@ -7,3 +7,4 @@ C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.Properties.Resourc
 C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.csproj.GenerateResource.cache
 C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.exe
 C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.pdb
+C:\Users\55000\source\repos\CG_lab1\CG_lab1\obj\Debug\CG_lab1.Form2.resources
